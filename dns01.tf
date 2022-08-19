@@ -19,6 +19,8 @@ spec:
     - selector:
         dnsZones:
           - "${var.dns01[count.index].dns_zone}"
+          - "${var.dns01[count.index].dns_zone2}"
+
       dns01:
         route53:
           region: ${var.dns01[count.index].region}
